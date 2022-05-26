@@ -2,6 +2,8 @@ body {
     margin: 0;
     padding: 0;
     margin-top: 200px;
+    display: flex;
+    flex-direction: row;
 }
 
 nav {
@@ -30,25 +32,15 @@ header {
 
 
 main {
-  position: fixed;
-  top: 72px;
-  bottom: 52px;
-  width: 100%;
+  /* position: fixed;
+  top: 70px;
+  bottom: 0px; */
+
   background-color: yellow;
-  overflow-y:scroll;
+  /* overflow-y:scroll; */
 
 }
 
-footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 50px;
-  border-top: 2px solid black;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  background-color:rgb(54, 156, 225);
-}
+
    
   
