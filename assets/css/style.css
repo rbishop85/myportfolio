@@ -2,16 +2,31 @@ body {
     margin: 0;
     padding: 0;;
     height: 100%
-
 }
 
 header nav {
     padding-right: 10px;
+    display: flex;
+    align-items: center;
 }
 
 h1 {
     font-size: 200%;
     padding-left: 10px;
+}
+
+h2 {
+  font-size: 175%;
+  border-bottom: 2px solid black;
+  margin-left: 10px;
+}
+
+nav a {
+  margin-left: 10px;
+}
+
+section {
+  margin-left: 20px;
 }
 
 header {
@@ -30,16 +45,16 @@ main {
   flex-direction: row;
   height: 90%;
   flex: 0;
-  /* overflow-y: auto; */
 }
 
 aside {
   display: flex;
   flex-direction: column;
-  background-color: purple;
+  /* background-color: purple; */
   height: 100%;
   flex: 0 1 300px;
   flex-wrap: wrap;
+  border-right: 2px solid black;
 }
 
 aside img {
@@ -48,21 +63,36 @@ aside img {
 }
 
 button {
-  width: 100%;
+  margin-left: 150px;
+  width: 150px;
+  Text-align: right;
+  font-size: 150%;
+  /* background-color: white;
+  border: none; */
 }
 
 article {
-  background-color: yellow;
-  
+  /* background-color: yellow; */
   flex-wrap: wrap;
   height: 100%;
   overflow: auto;
   flex: 1 1;
 }
 
+@media screen and (max-width: 992px) {
+  header {
+    background: rgb(47, 136, 196);
+  }
+}
 
+@media screen and (max-width: 768px) {
+  header {
+    background: rgb(36, 107, 154);
+  }
+}
 
-
-
-   
-  
+@media screen and (max-width: 576px) {
+  header {
+    background: rgb(23, 67, 97);
+  }
+}
