@@ -1,22 +1,18 @@
-/* html { 
-  scroll-behavior:auto;
-} */
-
 body {
-    margin: 0;
-    padding: 0;;
-    height: 100%
+  margin: 0;
+  padding: 0;;
+  height: 100%
 }
 
 header nav {
-    padding-right: 10px;
-    display: flex;
-    align-items: center;
+  padding-right: 10px;
+  display: flex;
+  align-items: center;
 }
 
 h1 {
-    font-size: 200%;
-    padding-left: 10px;
+  font-size: 200%;
+  padding-left: 10px;
 }
 
 h2 {
@@ -29,7 +25,15 @@ header nav a {
   margin-left: 10px;
 }
 
-section {
+#phonenav {
+  display: none;
+}
+
+#phoneimg {
+  display: none;
+}
+
+article section {
   margin-left: 20px;
 }
 
@@ -54,19 +58,18 @@ main {
 aside {
   display: flex;
   flex-direction: column;
-  /* background-color: purple; */
   height: 100%;
   flex: 0 1 300px;
   flex-wrap: wrap;
   border-right: 2px solid black;
 }
 
-aside img {
+/* aside img {
   height: 300px;
   width: 300px
-}
+} */
 
-button {
+aside button {
   margin-left: 150px;
   width: 150px;
   Text-align: right;
@@ -76,7 +79,6 @@ button {
 }
 
 article {
-  /* background-color: yellow; */
   flex-wrap: wrap;
   height: 100%;
   overflow: auto;
@@ -99,5 +101,18 @@ article {
 @media screen and (max-width: 576px) {
   header {
     background: rgb(23, 67, 97);
+    flex-direction: column;
+    height: 70px;
+  }
+  #phonenav {
+    display: flex;
+    justify-content: center;
+  }
+  #phoneimg {
+    display: flex;
+    justify-content: center;
+  }
+  aside {
+    display: none;
   }
 }
