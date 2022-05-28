@@ -17,8 +17,6 @@ h1 {
 
 h2 {
   font-size: 175%;
-  /* border-bottom: 2px solid black; */
-  /* margin-left: 10px; */
 }
 
 header nav a {
@@ -38,6 +36,29 @@ p {
   display: none;
 }
 
+.skills {
+  display: flex;
+  justify-content: center;
+}
+
+.skills div {
+  /* background-color: yellow; */
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 75%;
+  justify-content: center;
+}
+
+div.skill {
+  padding: 10px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  background: rgba(163, 162, 162, 0.25);
+  border-radius: 10px;
+  width: auto;
+}
+
 #phoneimg {
   display: none;
 }
@@ -49,8 +70,7 @@ article h2 {
 }
 
 article section {
-  margin-left: 20px;
-  margin-top: 20px;
+  margin: 20px;
 }
 
 header {
