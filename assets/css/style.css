@@ -17,12 +17,16 @@ h1 {
 
 h2 {
   font-size: 175%;
-  border-bottom: 2px solid black;
-  margin-left: 10px;
+  /* border-bottom: 2px solid black; */
+  /* margin-left: 10px; */
 }
 
 header nav a {
   margin-left: 10px;
+}
+
+p {
+  line-height: 1.25;
 }
 
 /* #me {
@@ -38,8 +42,15 @@ header nav a {
   display: none;
 }
 
+article h2 {
+  margin-top: 30px;
+  text-align: center;
+  text-decoration: underline;
+}
+
 article section {
   margin-left: 20px;
+  margin-top: 20px;
 }
 
 header {
