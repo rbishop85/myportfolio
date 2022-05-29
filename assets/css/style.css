@@ -27,10 +27,11 @@ p {
   line-height: 1.25;
 }
 
-/* #me {
-  filter: grayscale(100%);
-   -webkit-filter: grayscale(100%);
-} */
+#me {
+  border-radius: 100px;
+  /* filter: grayscale(100%);
+   -webkit-filter: grayscale(100%); */
+}
 
 #phonenav {
   display: none;
@@ -76,9 +77,10 @@ article section {
 header {
   display: flex;
   flex-direction: row;
+  flex: 1 0 auto;
   align-items: center;
   justify-content: space-between;
-  height: 5%;
+  height: 70px;
   background-color: rgb(54, 156, 225);
   border-bottom: 2px solid black;
 }
@@ -87,7 +89,7 @@ main {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  height: 95%;
+  height: calc(100% - 70px);
   flex: 0;
 }
 
@@ -95,7 +97,7 @@ aside {
   display: flex;
   flex-direction: column;
   width: 300px;
-  border-right: 2px solid black;
+  /* border-right: 2px solid black; */
 }
 
 aside nav {
@@ -112,6 +114,13 @@ aside button {
   width: 150px;
   Text-align: right;
   font-size: 150%;
+  background-color: purple;
+  border: none;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  /* transform: rotate(8deg); */
+  margin-top: 5px;
+  color: white;
   /* background-color: white;
   border: none; */
 }
@@ -124,19 +133,20 @@ article {
   scroll-behavior: smooth;
 }
 
+/* Remove 992px screen option once sure it isn't needed */
 @media screen and (max-width: 992px) {
   header {
-    background: rgb(47, 136, 196);
+    background: rgb(47, 196, 136);
   }
 }
 
-@media screen and (max-width: 768px) {
+/* @media screen and (max-width: 768px) {
   header {
     background: rgb(36, 107, 154);
   }
-}
+} */
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 768px) {
   header {
     background: rgb(23, 67, 97);
     flex-direction: column;
@@ -146,6 +156,10 @@ article {
     display: flex;
     justify-content: center;
   }
+  /* Height is calculated as full page height minus 70px for header and an additial 23px for #phonenav buttons */
+  main {
+    height: calc(100% - 93px);
+  }
   #phoneimg {
     display: flex;
     justify-content: center;
@@ -154,3 +168,7 @@ article {
     display: none;
   }
 }
+
+/* @media screen and (max-width: 576px) {
+
+} */
