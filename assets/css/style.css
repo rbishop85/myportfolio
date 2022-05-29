@@ -1,7 +1,10 @@
 body {
   margin: 0;
   padding: 0;;
-  height: 100%
+  height: 100%;
+  /* background-color: rgb(65, 65, 65); */
+  background-color: #484848;
+  color: #E0E1DD;
 }
 
 header nav {
@@ -12,7 +15,7 @@ header nav {
 
 h1 {
   font-size: 200%;
-  padding-left: 10px;
+  padding-left: 30px;
 }
 
 h2 {
@@ -28,9 +31,16 @@ p {
 }
 
 #me {
+  margin-top: 20px;
   border-radius: 100px;
+  border: 1px solid black;
   /* filter: grayscale(100%);
    -webkit-filter: grayscale(100%); */
+}
+
+#me:hover {
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
 }
 
 #phonenav {
@@ -68,6 +78,7 @@ article h2 {
   margin-top: 30px;
   text-align: center;
   text-decoration: underline;
+  text-decoration-color: #191A1D;
 }
 
 article section {
@@ -81,8 +92,9 @@ header {
   align-items: center;
   justify-content: space-between;
   height: 70px;
-  background-color: rgb(54, 156, 225);
-  border-bottom: 2px solid black;
+  /* background-color: rgb(54, 156, 225); */
+  background-color: #191A1D;
+  /* border-bottom: 2px solid black; */
 }
 
 main {
@@ -91,6 +103,23 @@ main {
   flex-direction: row;
   height: calc(100% - 70px);
   flex: 0;
+}
+
+#projects {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+#project-lastest {
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.projects {
+  width: 50%;
+  flex: 0 0 auto;
+  background-color: yellow;
 }
 
 aside {
@@ -103,26 +132,42 @@ aside {
 aside nav {
   display: flex;
   flex-direction: column;
+  margin-top: 20px;
   width: 100%
+}
+
+h2.underline {
+  color: yellow;
 }
 
 aside a {
   align-self: flex-end;
 }
 
-aside button {
+.navbutton {
   width: 150px;
-  Text-align: right;
+  Text-align: center;
   font-size: 150%;
-  background-color: purple;
+  background-color: #007B6D;
   border: none;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
-  /* transform: rotate(8deg); */
-  margin-top: 5px;
-  color: white;
-  /* background-color: white;
-  border: none; */
+  border: 1px solid black;
+  transform: rotate(8deg);
+  margin-top: 10px;
+  color: #E0E1DD;
+}
+
+.navbutton:hover {
+  box-shadow: 0 0 10px black inset;
+}
+
+.navbutton:focus {
+  box-shadow: 0 0 10px black inset;
+}
+
+.navbutton:active {
+  font-size: 130%;
 }
 
 article {
@@ -134,11 +179,11 @@ article {
 }
 
 /* Remove 992px screen option once sure it isn't needed */
-@media screen and (max-width: 992px) {
+/* @media screen and (max-width: 992px) {
   header {
     background: rgb(47, 196, 136);
   }
-}
+} */
 
 /* @media screen and (max-width: 768px) {
   header {
@@ -148,9 +193,12 @@ article {
 
 @media screen and (max-width: 768px) {
   header {
-    background: rgb(23, 67, 97);
+    /* background: rgb(23, 67, 97); */
     flex-direction: column;
     /* height: 70px; */
+  }
+  h1 {
+    padding-left: 0px;
   }
   #phonenav {
     display: flex;
