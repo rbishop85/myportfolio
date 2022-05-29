@@ -94,19 +94,21 @@ main {
 aside {
   display: flex;
   flex-direction: column;
-  height: 100%;
-  flex: 0 1 300px;
-  flex-wrap: wrap;
+  width: 300px;
   border-right: 2px solid black;
 }
 
-/* aside img {
-  height: 300px;
-  width: 300px
-} */
+aside nav {
+  display: flex;
+  flex-direction: column;
+  width: 100%
+}
+
+aside a {
+  align-self: flex-end;
+}
 
 aside button {
-  margin-left: 150px;
   width: 150px;
   Text-align: right;
   font-size: 150%;
@@ -138,7 +140,7 @@ article {
   header {
     background: rgb(23, 67, 97);
     flex-direction: column;
-    height: 70px;
+    /* height: 70px; */
   }
   #phonenav {
     display: flex;
