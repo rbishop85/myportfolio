@@ -2,7 +2,6 @@ body {
   margin: 0;
   padding: 0;;
   height: 100%;
-  /* background-color: rgb(65, 65, 65); */
   background-color: #484848;
   color: #E0E1DD;
 }
@@ -30,15 +29,13 @@ p {
   line-height: 1.25;
 }
 
-#me {
+#me, #me2nd {
   margin-top: 20px;
   border-radius: 100px;
   border: 1px solid black;
-  /* filter: grayscale(100%);
-   -webkit-filter: grayscale(100%); */
 }
 
-#me:hover {
+#me:hover, #me2nd:hover {
   filter: grayscale(100%);
   -webkit-filter: grayscale(100%);
 }
@@ -53,7 +50,6 @@ p {
 }
 
 .skills div {
-  /* background-color: yellow; */
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -92,9 +88,7 @@ header {
   align-items: center;
   justify-content: space-between;
   height: 70px;
-  /* background-color: rgb(54, 156, 225); */
   background-color: #191A1D;
-  /* border-bottom: 2px solid black; */
 }
 
 main {
@@ -105,28 +99,31 @@ main {
   flex: 0;
 }
 
-#projects {
+#all-projects {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-}
-
-#project-lastest {
-  width: 100%;
-  flex: 0 0 auto;
+  justify-content: center;
 }
 
 .projects {
-  width: 50%;
+  width: 48%;
+  /* min-width: 48%; */
+  margin: auto;
+  margin-top: 10px;
   flex: 0 0 auto;
   background-color: yellow;
+}
+
+#proj1 {
+  width: 98%;
+  flex: 0 0 auto;
 }
 
 aside {
   display: flex;
   flex-direction: column;
   width: 300px;
-  /* border-right: 2px solid black; */
 }
 
 aside nav {
@@ -154,19 +151,45 @@ aside a {
   border-bottom-left-radius: 10px;
   border: 1px solid black;
   transform: rotate(8deg);
+  box-shadow: 5px 5px 5px #191A1D;
   margin-top: 10px;
   color: #E0E1DD;
 }
 
 .navbutton:hover {
-  box-shadow: 0 0 10px black inset;
+  box-shadow: 0 0 10px black inset, 5px 5px 5px #191A1D;
 }
 
 .navbutton:focus {
-  box-shadow: 0 0 10px black inset;
+  box-shadow: 0 0 10px black inset, 5px 5px 5px #191A1D;
 }
 
 .navbutton:active {
+  font-size: 130%;
+}
+
+.phonebutton {
+  font-size: 140%;
+  background-color: #007B6D;
+  border: none;
+  border-radius: 10px;
+  border: 1px solid black;
+  box-shadow: 5px 5px 5px #191A1D;
+  margin-top: 10px;
+  margin-left: 3px;
+  margin-right: 3px;
+  color: #E0E1DD;
+}
+
+.phonebutton:hover {
+  box-shadow: 0 0 10px black inset, 5px 5px 5px #191A1D;
+}
+
+.phonebutton:focus {
+  box-shadow: 0 0 10px black inset, 5px 5px 5px #191A1D;
+}
+
+.phonebutton:active {
   font-size: 130%;
 }
 
@@ -177,19 +200,6 @@ article {
   flex: 1 1;
   scroll-behavior: smooth;
 }
-
-/* Remove 992px screen option once sure it isn't needed */
-/* @media screen and (max-width: 992px) {
-  header {
-    background: rgb(47, 196, 136);
-  }
-} */
-
-/* @media screen and (max-width: 768px) {
-  header {
-    background: rgb(36, 107, 154);
-  }
-} */
 
 @media screen and (max-width: 768px) {
   header {
@@ -216,7 +226,3 @@ article {
     display: none;
   }
 }
-
-/* @media screen and (max-width: 576px) {
-
-} */
