@@ -203,9 +203,7 @@ article {
 
 @media screen and (max-width: 768px) {
   header {
-    /* background: rgb(23, 67, 97); */
     flex-direction: column;
-    /* height: 70px; */
   }
   h1 {
     padding-left: 0px;
@@ -213,10 +211,11 @@ article {
   #phonenav {
     display: flex;
     justify-content: center;
+    height: 45px
   }
-  /* Height is calculated as full page height minus 70px for header and an additial 23px for #phonenav buttons */
+  /* Height is calculated as full page height minus 70px for header and an additional 45px for #phonenav buttons */
   main {
-    height: calc(100% - 93px);
+    height: calc(100% - 115px);
   }
   #phoneimg {
     display: flex;
