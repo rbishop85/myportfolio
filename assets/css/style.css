@@ -3,14 +3,15 @@
   --secondary: rgba(25, 26, 29, 1);
   --text: rgba(224, 225, 221, 1);
   --color: rgba(0, 123, 109, 1);
+  --detail: rgba(163, 162, 162, 0.25);
 }
 
 body {
   margin: 0;
   padding: 0;;
   height: 100%;
-  background-color: #484848;
-  color: #E0E1DD;
+  background-color: var(--primary);
+  color: var(--text);
 }
 
 header {
@@ -20,7 +21,7 @@ header {
   align-items: center;
   justify-content: space-between;
   height: 70px;
-  background-color: #191A1D;
+  background-color: var(--secondary);
 }
 
 header nav {
@@ -53,7 +54,7 @@ p {
 #me, #me2nd {
   margin-top: 20px;
   border-radius: 100px;
-  border: 1px solid black;
+  border: 1px solid var(--secondary);
 }
 
 #me:hover, #me2nd:hover {
@@ -82,7 +83,7 @@ div.skill {
   padding: 10px;
   margin-bottom: 20px;
   margin-right: 20px;
-  background: rgba(163, 162, 162, 0.25);
+  background: var(--detail);
   border-radius: 10px;
   width: auto;
 }
@@ -95,7 +96,7 @@ article h2 {
   margin-top: 30px;
   text-align: center;
   text-decoration: underline;
-  text-decoration-color: #191A1D;
+  text-decoration-color: var(--secondary);
 }
 
 article section {
@@ -116,13 +117,16 @@ main {
   justify-content: center;
 }
 
-/* .projs {
-  width: 48%;
-  margin: auto;
-  margin-top: 10px;
-  flex: 0 0 auto;
-  background-color: yellow;
-} */
+#resum {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#resumdown {
+  line-height: 2;
+  text-align: center;
+}
 
 .projs {
 border: 3px solid var(--secondary);
@@ -204,10 +208,6 @@ aside nav {
   width: 100%
 }
 
-h2.underline {
-  color: yellow;
-}
-
 aside a {
   align-self: flex-end;
 }
@@ -216,23 +216,23 @@ aside a {
   width: 150px;
   Text-align: center;
   font-size: 150%;
-  background-color: #007B6D;
+  background-color: var(--color);
   border: none;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
-  border: 1px solid black;
+  border: 1px solid var(--secondary);
   transform: rotate(8deg);
-  box-shadow: 5px 5px 5px #191A1D;
+  box-shadow: 5px 5px 5px var(--secondary);
   margin-top: 10px;
-  color: #E0E1DD;
+  color: var(--text);
 }
 
 .navbutton:hover {
-  box-shadow: 0 0 10px black inset, 5px 5px 5px #191A1D;
+  box-shadow: 0 0 10px var(--secondary) inset, 5px 5px 5px var(--secondary);
 }
 
 .navbutton:focus {
-  box-shadow: 0 0 10px black inset, 5px 5px 5px #191A1D;
+  box-shadow: 0 0 10px var(--secondary) inset, 5px 5px 5px var(--secondary);
 }
 
 .navbutton:active {
@@ -241,23 +241,23 @@ aside a {
 
 .phonebutton {
   font-size: 140%;
-  background-color: #007B6D;
+  background-color: var(--color);
   border: none;
   border-radius: 10px;
-  border: 1px solid black;
-  box-shadow: 5px 5px 5px #191A1D;
+  border: 1px solid var(--secondary);
+  box-shadow: 5px 5px 5px var(--secondary);
   margin-top: 10px;
   margin-left: 3px;
   margin-right: 3px;
-  color: #E0E1DD;
+  color: var(--text);
 }
 
 .phonebutton:hover {
-  box-shadow: 0 0 10px black inset, 5px 5px 5px #191A1D;
+  box-shadow: 0 0 10px var(--secondary) inset, 5px 5px 5px var(--secondary);
 }
 
 .phonebutton:focus {
-  box-shadow: 0 0 10px black inset, 5px 5px 5px #191A1D;
+  box-shadow: 0 0 10px var(--secondary) inset, 5px 5px 5px var(--secondary);
 }
 
 .phonebutton:active {
