@@ -30,6 +30,10 @@ header nav {
   align-items: center;
 }
 
+header nav a {
+  margin-left: 10px;
+}
+
 h1 {
   font-size: 200%;
   padding-left: 30px;
@@ -43,21 +47,17 @@ h3 {
   font-size: 150%;
 }
 
-header nav a {
-  margin-left: 10px;
-}
-
 p {
   line-height: 1.25;
 }
 
-#me, #me2nd {
+.me {
   margin-top: 20px;
   border-radius: 100px;
   border: 1px solid var(--secondary);
 }
 
-#me:hover, #me2nd:hover {
+.me:hover {
   filter: grayscale(100%);
   -webkit-filter: grayscale(100%);
 }
@@ -117,13 +117,7 @@ main {
   justify-content: center;
 }
 
-#resum {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-#resumdown {
+article h3 {
   line-height: 2;
   text-align: center;
 }
@@ -141,6 +135,8 @@ margin: 5px;
 background-size: cover;
 color: var(--text);
 text-decoration: none;
+background-size: cover;
+background-repeat: no-repeat;
 }
 
 .projs:first-child {
@@ -164,34 +160,25 @@ text-decoration: none;
 
 #proj1 {
   background-image: url("../images/proj1.jpg")
-  
 }
 
 #proj2 {
   background-image: url("../images/proj2.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
   background-position: center 70%;
 }
 
 #proj3 {
   background-image: url("../images/proj3.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
   background-position: center 70%;
 }
 
 #proj4 {
   background-image: url("../images/proj4.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
   background-position: center left;
 }
 
 #proj5 {
   background-image: url("../images/proj5.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
   background-position: center;
 }
 
@@ -210,10 +197,6 @@ aside nav {
 
 aside a {
   align-self: flex-end;
-}
-
-object {
-  width: 100%;
 }
 
 .navbutton {
