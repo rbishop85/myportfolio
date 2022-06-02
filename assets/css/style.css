@@ -212,6 +212,10 @@ aside a {
   align-self: flex-end;
 }
 
+object {
+  width: 100%;
+}
+
 .navbutton {
   width: 150px;
   Text-align: center;
