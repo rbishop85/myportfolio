@@ -6,9 +6,20 @@
   --detail: rgba(163, 162, 162, 0.25);
 }
 
-body {
+* {
   margin: 0;
-  padding: 0;;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  line-height: 1;
+  font-family: sans-serif;
   height: 100%;
   background-color: var(--primary);
   color: var(--text);
@@ -139,27 +150,19 @@ background-size: cover;
 background-repeat: no-repeat;
 }
 
-.projs:first-child {
-  min-height: 300px;
-  flex-basis: 100%;
-}
-
-.projs:hover {
-  box-shadow: 5px 5px 5px var(--color);
-}
-
-.projs:focus {
+.projs:hover, .projs:focus {
   box-shadow: 5px 5px 5px var(--color);
 }
 
 .projs div {
   background-color: var(--secondary);
   padding: 8px 10px;
-  /* color: var(--text); */
 }
 
 #proj1 {
-  background-image: url("../images/proj1.jpg")
+  background-image: url("../images/proj1.jpg");
+  min-height: 300px;
+  flex-basis: 100%;
 }
 
 #proj2 {
@@ -199,12 +202,11 @@ aside a {
   align-self: flex-end;
 }
 
-.navbutton {
+button {
   width: 150px;
   Text-align: center;
   font-size: 150%;
   background-color: var(--color);
-  border: none;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
   border: 1px solid var(--secondary);
@@ -214,40 +216,15 @@ aside a {
   color: var(--text);
 }
 
-.navbutton:hover {
+button:hover {
   box-shadow: 0 0 10px var(--secondary) inset, 5px 5px 5px var(--secondary);
 }
 
-.navbutton:focus {
+button:focus {
   box-shadow: 0 0 10px var(--secondary) inset, 5px 5px 5px var(--secondary);
 }
 
-.navbutton:active {
-  font-size: 130%;
-}
-
-.phonebutton {
-  font-size: 140%;
-  background-color: var(--color);
-  border: none;
-  border-radius: 10px;
-  border: 1px solid var(--secondary);
-  box-shadow: 5px 5px 5px var(--secondary);
-  margin-top: 10px;
-  margin-left: 3px;
-  margin-right: 3px;
-  color: var(--text);
-}
-
-.phonebutton:hover {
-  box-shadow: 0 0 10px var(--secondary) inset, 5px 5px 5px var(--secondary);
-}
-
-.phonebutton:focus {
-  box-shadow: 0 0 10px var(--secondary) inset, 5px 5px 5px var(--secondary);
-}
-
-.phonebutton:active {
+button:active {
   font-size: 130%;
 }
 
@@ -277,6 +254,14 @@ article {
     display: flex;
     justify-content: center;
     height: 45px
+  }
+  button {
+    width: auto;
+    font-size: 140%;
+    border-radius: 10px;
+    transform: rotate(0);
+    margin-left: 3px;
+    margin-right: 3px;
   }
   /* Height is calculated as full page height minus 70px for header and an additional 45px for #phonenav buttons */
   main {
