@@ -17,12 +17,34 @@ html {
 }
 
 body {
-  min-height: 100%;
   line-height: 1;
   font-family: sans-serif;
   height: 100%;
   background-color: var(--primary);
   color: var(--text);
+}
+
+h1 {
+  font-size: 200%;
+  padding-left: 30px;
+}
+
+h2 {
+  font-size: 175%;
+  margin-top: 30px;
+  text-align: center;
+  text-decoration: underline;
+  text-decoration-color: var(--secondary);
+}
+
+h3 {
+  font-size: 150%;
+  line-height: 2;
+  text-align: center;
+}
+
+p {
+  line-height: 1.5;
 }
 
 header {
@@ -45,21 +67,22 @@ header nav a {
   margin-left: 10px;
 }
 
-h1 {
-  font-size: 200%;
-  padding-left: 30px;
+#phonenav {
+  display: none;
 }
 
-h2 {
-  font-size: 175%;
+main {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  height: calc(100% - 70px);
+  flex: 0;
 }
 
-h3 {
-  font-size: 150%;
-}
-
-p {
-  line-height: 1.25;
+aside {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
 }
 
 .me {
@@ -73,64 +96,75 @@ p {
   -webkit-filter: grayscale(100%);
 }
 
-#phonenav {
-  display: none;
+aside nav {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  width: 100%
 }
 
-.skills {
-  display: flex;
-  justify-content: center;
+aside a {
+  align-self: flex-end;
 }
 
-.skills div {
-  display: flex;
+button {
+  width: 150px;
+  Text-align: center;
+  font-size: 150%;
+  background-color: var(--color);
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border: 1px solid var(--secondary);
+  transform: rotate(8deg);
+  box-shadow: 5px 5px 5px var(--secondary);
+  margin-top: 10px;
+  color: var(--text);
+}
+
+button:hover, button:focus {
+  box-shadow: 0 0 10px var(--secondary) inset, 5px 5px 5px var(--secondary);
+}
+
+button:active {
+  font-size: 130%;
+}
+
+article {
   flex-wrap: wrap;
-  align-items: center;
-  width: 75%;
-  justify-content: center;
-}
-
-div.skill {
-  padding: 10px;
-  margin-bottom: 20px;
-  margin-right: 20px;
-  background: var(--detail);
-  border-radius: 10px;
-  width: auto;
-}
-
-#phoneimg {
-  display: none;
-}
-
-article h2 {
-  margin-top: 30px;
-  text-align: center;
-  text-decoration: underline;
-  text-decoration-color: var(--secondary);
+  height: 100%;
+  overflow: auto;
+  flex: 1 1;
+  scroll-behavior: smooth;
 }
 
 article section {
   margin: 20px;
 }
 
-main {
+#phoneimg {
+  display: none;
+}
+
+.skills {
   display: flex;
   flex-wrap: wrap;
-  flex-direction: row;
-  height: calc(100% - 70px);
-  flex: 0;
+  justify-content: center;
+  margin: 20px auto;
+  width: 75%;
+}
+
+.skill {
+  padding: 10px;
+  margin: 0px 10px 20px 10px;
+  background: var(--detail);
+  border-radius: 10px;
+  width: auto;
 }
 
 #projects-all {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-}
-
-article h3 {
-  line-height: 2;
-  text-align: center;
 }
 
 .projs {
@@ -185,56 +219,7 @@ background-repeat: no-repeat;
   background-position: center;
 }
 
-aside {
-  display: flex;
-  flex-direction: column;
-  width: 300px;
-}
 
-aside nav {
-  display: flex;
-  flex-direction: column;
-  margin-top: 20px;
-  width: 100%
-}
-
-aside a {
-  align-self: flex-end;
-}
-
-button {
-  width: 150px;
-  Text-align: center;
-  font-size: 150%;
-  background-color: var(--color);
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
-  border: 1px solid var(--secondary);
-  transform: rotate(8deg);
-  box-shadow: 5px 5px 5px var(--secondary);
-  margin-top: 10px;
-  color: var(--text);
-}
-
-button:hover {
-  box-shadow: 0 0 10px var(--secondary) inset, 5px 5px 5px var(--secondary);
-}
-
-button:focus {
-  box-shadow: 0 0 10px var(--secondary) inset, 5px 5px 5px var(--secondary);
-}
-
-button:active {
-  font-size: 130%;
-}
-
-article {
-  flex-wrap: wrap;
-  height: 100%;
-  overflow: auto;
-  flex: 1 1;
-  scroll-behavior: smooth;
-}
 
 @media screen and (max-width: 992px) {
   .projs,
@@ -257,6 +242,7 @@ article {
   }
   button {
     width: auto;
+    padding: 3px;
     font-size: 140%;
     border-radius: 10px;
     transform: rotate(0);
