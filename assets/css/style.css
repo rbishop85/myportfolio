@@ -1,3 +1,4 @@
+/* Color palette for page */
 :root {
   --primary: rgba(72, 72, 72, 1);
   --secondary: rgba(25, 26, 29, 1);
@@ -6,6 +7,7 @@
   --detail: rgba(163, 162, 162, 0.25);
 }
 
+/* Some basic code that applies to elements throughout the page */
 * {
   margin: 0;
   padding: 0;
@@ -18,7 +20,7 @@ html {
 
 body {
   line-height: 1;
-  font-family: sans-serif;
+  font-family:'Times New Roman', Times, serif;
   height: 100%;
   background-color: var(--primary);
   color: var(--text);
@@ -47,6 +49,7 @@ p {
   line-height: 1.5;
 }
 
+/* Header with fixed height because that was the only way I could figure out how to limit scrolling to one section of the page */
 header {
   display: flex;
   flex-direction: row;
@@ -57,6 +60,7 @@ header {
   background-color: var(--secondary);
 }
 
+/* Navigation links inside header that lead to ways to contact me */
 header nav {
   padding-right: 10px;
   display: flex;
@@ -67,10 +71,12 @@ header nav a {
   margin-left: 10px;
 }
 
+/* Navigation links for the page that are hidden by default and appear when viewed on a phone.  I chose to relocate them here because it gave me the ability to float them at the top of the page with the header. */
 #phonenav {
   display: none;
 }
 
+/* Main content section.  Calculated the height so that th main combined with the header would reach 100%.  This seemed to make the scrollbar function the way I wanted it to. */
 main {
   display: flex;
   flex-wrap: wrap;
@@ -79,6 +85,7 @@ main {
   flex: 0;
 }
 
+/* Left side of main section.  Never scrolls */
 aside {
   display: flex;
   flex-direction: column;
@@ -91,11 +98,13 @@ aside {
   border: 1px solid var(--secondary);
 }
 
+/* Found a code for turning any image to grayscale and decided to attach it as a hover pseudo-class to my portrait. */
 .me:hover {
   filter: grayscale(100%);
   -webkit-filter: grayscale(100%);
 }
 
+/* Default navigation buttons when page is viewed on larger screen */
 aside nav {
   display: flex;
   flex-direction: column;
@@ -121,14 +130,17 @@ button {
   color: var(--text);
 }
 
+/* Navigation buttons have an inner and outer shadow when hovered over or focussed on via tabbing. */
 button:hover, button:focus {
   box-shadow: 0 0 10px var(--secondary) inset, 5px 5px 5px var(--secondary);
 }
 
+/* Button text shrinks from default value when clicked. */
 button:active {
   font-size: 130%;
 }
 
+/* Primary information section at right side of main section.  Scrolls independently from every other element on page. */
 article {
   flex-wrap: wrap;
   height: 100%;
@@ -141,6 +153,7 @@ article section {
   margin: 20px;
 }
 
+/* Personal image for when viewed on phone, set to hidden by default. */
 #phoneimg {
   display: none;
 }
@@ -161,12 +174,14 @@ article section {
   width: auto;
 }
 
+/* Element containing the various projects I've worked on. */
 #projects-all {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
+/* Formatting for each individual Project element. */
 .projs {
 border: 3px solid var(--secondary);
 background-color: var(--secondary);
@@ -184,6 +199,7 @@ background-size: cover;
 background-repeat: no-repeat;
 }
 
+/* Individual projects gain a colorful shadow when hovered over or focussed on.  Color matches the colored buttons on page. */
 .projs:hover, .projs:focus {
   box-shadow: 5px 5px 5px var(--color);
 }
@@ -199,6 +215,7 @@ background-repeat: no-repeat;
   flex-basis: 100%;
 }
 
+/* Adjusted the position of each background image to better center on the content I wanted to focus on. */
 #proj2 {
   background-image: url("../images/proj2.jpg");
   background-position: center 70%;
@@ -220,26 +237,30 @@ background-repeat: no-repeat;
 }
 
 
-
+/* Tablet view, only item changed was making all of the project elements switch over to 100% width of their parent element. */
 @media screen and (max-width: 992px) {
-  .projs,
-  .projs:first-child {
+  .projs {
     flex-basis: 100%;
   }
 }
 
+/* Phone view, decided to just do one as the layout stays the same for both. */
 @media screen and (max-width: 768px) {
+  /* Reorganized header to a column layout to stack my name and contact links */
   header {
     flex-direction: column;
   }
+  /* Got rid of padding on my name so that it centered properly. */
   h1 {
     padding-left: 0px;
   }
+  /* Activated the navigation links for phone view */
   #phonenav {
     display: flex;
     justify-content: center;
     height: 45px
   }
+  /* Changed formatting of buttons for smaller screen. */
   button {
     width: auto;
     padding: 3px;
@@ -249,14 +270,16 @@ background-repeat: no-repeat;
     margin-left: 3px;
     margin-right: 3px;
   }
-  /* Height is calculated as full page height minus 70px for header and an additional 45px for #phonenav buttons */
+  /* Readjusted height of main section due to navigation buttons also now sitting on top of it. (70px for header and 45px for the navigation bar) */
   main {
     height: calc(100% - 115px);
   }
+  /* Activated personal photo position used for viewing on phones. */
   #phoneimg {
     display: flex;
     justify-content: center;
   }
+  /* Hid the left side as everything inside it has been given a new custom location to streamline the page on phone screens. */
   aside {
     display: none;
   }
