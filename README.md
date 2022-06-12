@@ -7,7 +7,7 @@ This is my personal portfolio page that allows me both to show off my skills in 
 ## Contents:
 * [Live Page Link](#live-page-link)
 * [Version](#version-10)
-* [Screenshots](#screenshots)
+* [Demo](#demo)
 * [Skills/Concepts Used](#skillsconcepts-used)
 * [Future Plans](#future-plans)
 * [Credits](#credits)
@@ -20,24 +20,21 @@ This is my personal portfolio page that allows me both to show off my skills in 
 
 ---
 
-## Version: 1.0
+## Version: 1.05
 
 Revision History:
-* 1.0 - Initial page build
+* 1.00 - Initial page build
+* 1.05 - Added 2 project links, updated screenshots to demo gifs
 
 ---
 
-## Screenshots:
+## Demo:
 
-> **Note**: First two screenshots are in desktop mode, photo and navigation links on the left side.  Second set of screenshots are in phone mode, everything is stacked vertically.
+> **Note**: First demo is in desktop mode, photo and navigation links on the left side.  Second demo is in phone mode, everything is stacked vertically.
 
-![Screenshot 1 of page in desktop mode.](./assets/images/sc1.jpg)
+![Demo of page in desktop mode.](./assets/images/portdemo1.gif)
 
-![Screenshot 2 of page in desktop mode.](./assets/images/sc2.jpg)
-
-![Screenshot 1 of page in phone mode.](./assets/images/sc3.jpg)
-
-![Screenshot 2 of page in phone mode.](./assets/images/sc4.jpg)
+![Demo of page in phone mode.](./assets/images/portdemo2.gif)
 
 ---
 
@@ -60,7 +57,8 @@ Revision History:
 ## Credits:
 
 * Contact Link Badges: https://github.com/alexandresanlim/Badges4-README.md-Profile
-* First 2 Car Photos: https://wallpaperaccess.com/
+* Lock Image: [Unsplash.com](https://unsplash.com/)
+* Rock, Paper, Scissors Image: [Human hand vector created by upklyak - www.freepik.com](https://www.freepik.com/vectors/human-hand)
 
 ---
 

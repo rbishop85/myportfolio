@@ -210,19 +210,19 @@ background-repeat: no-repeat;
 }
 
 #proj1 {
-  background-image: url("../images/proj1.jpg");
+  background-image: url("../images/passgen.jpg");
   min-height: 300px;
   flex-basis: 100%;
 }
 
 /* Adjusted the position of each background image to better center on the content I wanted to focus on. */
 #proj2 {
-  background-image: url("../images/proj2.jpg");
+  background-image: url("../images/rocpapsci.jpg");
   background-position: center 70%;
 }
 
 #proj3 {
-  background-image: url("../images/proj3.jpg");
+  background-image: url("../images/refactor.jpg");
   background-position: center 70%;
 }
 
