@@ -20,11 +20,12 @@ This is my personal portfolio page that allows me both to show off my skills in 
 
 ---
 
-## Version: 1.05
+## Version: 1.10
 
 Revision History:
 * 1.00 - Initial page build
 * 1.05 - Added 2 project links, updated screenshots to demo gifs
+* 1.10 - Added latest project: Coding Quiz
 
 ---
 
