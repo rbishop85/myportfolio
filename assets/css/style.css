@@ -210,30 +210,31 @@ background-repeat: no-repeat;
 }
 
 #proj1 {
-  background-image: url("../images/codequiz.jpg");
+  background-image: url("../images/quoteme.jpg");
   min-height: 300px;
   flex-basis: 100%;
+  background-position: center 30%;
 }
 
 /* Adjusted the position of each background image to better center on the content I wanted to focus on. */
 #proj2 {
-  background-image: url("../images/passgen.jpg");
+  background-image: url("../images/weatherdash.jpg");
   background-position: center 50%;
 }
 
 #proj3 {
-  background-image: url("../images/rocpapsci.jpg");
+  background-image: url("../images/scheduler.jpg");
   background-position: center 70%;
 }
 
 #proj4 {
-  background-image: url("../images/refactor.jpg");
-  background-position: center 70%;
+  background-image: url("../images/codequiz.jpg");
+  background-position: center 0%;
 }
 
 #proj5 {
-  background-image: url("../images/proj4.jpg");
-  background-position: center left;
+  background-image: url("../images/passgen.jpg");
+  background-position: center 50%;
 }
 
 
